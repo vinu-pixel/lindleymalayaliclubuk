@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Editor Dashboard | Lindley Malayali Club UK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1976d2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #bbdefb;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .dashboard {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #0d47a1;
+      text-align: center;
+    }
+    .upload-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+    .credit {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Photo Editor Dashboard</h1>
+    <p>Manage and preview gallery images</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="dashboard.html">Main Admin</a>
+    <a href="event-dashboard.html">Event Manager</a>
+    <a href="photo-dashboard.html">Photo Editor</a>
+  </nav>
+
+  <div class="dashboard">
+    <h2>Upload Event Photos</h2>
+    <div class="upload-section">
+      <input type="file" id="photoUpload" multiple accept="image/*" onchange="previewPhotos()">
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <div class="credit">
+    Website created by Vinu Nair © 2025
+  </div>
+
+  <script>
+    function previewPhotos() {
+      const gallery = document.getElementById("gallery");
+      const files = document.getElementById("photoUpload").files;
+      gallery.innerHTML = "";
+
+      for (let i = 0; i < files.length; i++) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.createElement("img");
+          img.src = e.target.result;
+          gallery.appendChild(img);
+        };
+        reader.readAsDataURL(files[i]);
+      }
+    }
+  </script>
+</body>
+</html>

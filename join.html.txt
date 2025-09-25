@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Join Us | Lindley Malayali Club UK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffde7;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #b71c1c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #fbc02d;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .form-section {
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d84315;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .credit {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Join Lindley Malayali Club</h1>
+    <p>Become a member or register for upcoming events</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html">Join Us</a>
+  </nav>
+
+  <div class="form-section">
+    <h2>Membership & Event Registration</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="event">Select Event:</label>
+      <select id="event" name="event">
+        <option value="onam">Onam Celebration</option>
+        <option value="christmas">Christmas & New Year</option>
+        <option value="vishu">Vishu Festival</option>
+        <option value="easter">Easter Gathering</option>
+        <option value="general">General Membership</option>
+      </select>
+
+      <label for="message">Message or Special Request:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <div class="credit">
+    Website created by Vinu Nair © 2025
+  </div>
+</body>
+</html>

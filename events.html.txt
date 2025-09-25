@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events | Lindley Malayali Club UK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #d32f2f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #fbc02d;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .section {
+      padding: 30px;
+      text-align: center;
+    }
+    .event-card {
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .event-card h2 {
+      color: #d84315;
+    }
+    .countdown {
+      font-size: 1.5em;
+      color: #388e3c;
+      margin-top: 10px;
+    }
+    .festive-animation {
+      animation: sparkle 2s infinite;
+      color: #fbc02d;
+      font-size: 2em;
+    }
+    @keyframes sparkle {
+      0% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.2; transform: scale(1); }
+    }
+    .credit {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Upcoming Events</h1>
+    <p>Join us for a year of celebration, culture, and community!</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="join.html">Join Us</a>
+  </nav>
+
+  <div class="section">
+    <div class="event-card">
+      <h2>🎄 Christmas & New Year Celebration</h2>
+      <p><strong>Date:</strong> 3rd January 2026</p>
+      <p><strong>Time:</strong> 3:30 PM – 10:00 PM</p>
+      <p><strong>Venue:</strong> Lindley Focal Community Centre</p>
+      <p>Join us for an evening of festivities, music, dance & feast!</p>
+      <div class="countdown" id="countdown"></div>
+      <div class="festive-animation">✨🎅🎉</div>
+    </div>
+
+    <div class="event-card">
+      <h2>🌾 Onam Celebration</h2>
+      <p>Traditional feast, games, and cultural performances</p>
+    </div>
+
+    <div class="event-card">
+      <h2>🌸 Vishu Festival</h2>
+      <p>Celebrate the Malayali New Year with joy and prosperity</p>
+    </div>
+
+    <div class="event-card">
+      <h2>✝️ Easter Gathering</h2>
+      <p>Community brunch, egg hunt, and spring festivities</p>
+    </div>
+  </div>
+
+  <div class="credit">
+    Website created by Vinu Nair © 2025
+  </div>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("January 3, 2026 15:30:00").getTime();
+
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "🎉 The celebration has begun!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s until the celebration!`;
+    };
+
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>

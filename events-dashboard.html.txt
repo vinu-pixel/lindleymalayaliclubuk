@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Manager Dashboard | Lindley Malayali Club UK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff3e0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f57c00;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #ffe0b2;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .dashboard {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #e65100;
+      text-align: center;
+    }
+    .filter {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #ffe0b2;
+    }
+    .credit {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Event Manager Dashboard</h1>
+    <p>Track RSVPs and manage attendance</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="dashboard.html">Main Admin</a>
+    <a href="photo-dashboard.html">Photo Editor</a>
+    <a href="event-dashboard.html">Event Manager</a>
+  </nav>
+
+  <div class="dashboard">
+    <h2>RSVP List</h2>
+
+    <div class="filter">
+      <label for="eventFilter">Filter by Event:</label>
+      <select id="eventFilter" onchange="filterTable()">
+        <option value="all">All</option>
+        <option value="onam">Onam Celebration</option>
+        <option value="christmas">Christmas & New Year</option>
+        <option value="vishu">Vishu Festival</option>
+        <option value="easter">Easter Gathering</option>
+      </select>
+    </div>
+
+    <table id="rsvpTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Event</th>
+          <th>Attendance</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample data rows -->
+        <tr data-event="christmas">
+          <td>Anna George</td>
+          <td>anna@example.com</td>
+          <td>07123 456789</td>
+          <td>Christmas & New Year</td>
+          <td><input type="checkbox"></td>
+          <td>Bringing dessert</td>
+        </tr>
+        <tr data-event="onam">
+          <td>Rajesh Kumar</td>
+          <td>rajesh@example.com</td>
+          <td>07987 654321</td>
+          <td>Onam Celebration</td>
+          <td><input type="checkbox"></td>
+          <td>Will help with setup</td>
+        </tr>
+        <!-- Add more rows manually or dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="credit">
+    Website created by Vinu Nair © 2025
+  </div>
+
+  <script>
+    function filterTable() {
+      const filter = document.getElementById("eventFilter").value;
+      const rows = document.querySelectorAll("#rsvpTable tbody tr");
+
+      rows.forEach(row => {
+        const event = row.getAttribute("data-event");
+        row.style.display = (filter === "all" || filter === event) ? "" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

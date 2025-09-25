@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Lindley Malayali Club UK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffde7;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #b71c1c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #fbc02d;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d84315;
+      text-align: center;
+    }
+    .founders, .timeline, .photos {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .founders ul {
+      list-style: none;
+      padding: 0;
+    }
+    .founders li {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+      color: #444;
+    }
+    .timeline li {
+      margin: 10px 0;
+    }
+    .photos {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fff8e1;
+      border-radius: 10px;
+    }
+    .photos p {
+      font-style: italic;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+    <p>Celebrating Culture, Community & Connection</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h2>Our Story</h2>
+    <p>
+      Lindley Malayali Club UK was founded by a passionate group of individuals who shared a common dream: to create a vibrant space where culture could thrive and traditions could be celebrated. The founding members — <strong>Shijo P Raju, Vinu Nair, Ajesh Asokan, Siju Pulieyoor, Sijo Joseph, and Jerish P Krishnan</strong> — came together with a vision to provide a structured platform for celebrating major festivals like Onam, Christmas, Vishu, and Easter.
+    </p>
+
+    <div class="founders">
+      <h3>Founding Members</h3>
+      <ul>
+        <li>Shijo P Raju</li>
+        <li>Vinu Nair</li>
+        <li>Ajesh Asokan</li>
+        <li>Siju Pulieyoor</li>
+        <li>Sijo Joseph</li>
+        <li>Jerish P Krishnan</li>
+      </ul>
+    </div>
+
+    <div class="timeline">
+      <h3>Club Timeline</h3>
+      <ul>
+        <li>📌 <strong>Founded:</strong> 19 July 2025</li>
+        <li>🎉 <strong>First Event:</strong> Onam Celebration on 6 September 2025</li>
+      </ul>
+    </div>
+
+    <div class="photos">
+      <h3>Founders Gallery</h3>
+      <p>📷 Photo section coming soon — you’ll be able to add images of our founding members here once the site is live.</p>
+    </div>
+  </div>
+</body>
+</html>
